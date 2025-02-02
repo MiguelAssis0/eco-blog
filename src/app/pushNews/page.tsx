@@ -1,13 +1,14 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
+import { login } from "../types/Login";
 
 // Componente de Login
-function LoginComponent({ onLogin }) {
+function LoginComponent({ onLogin }: login) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Aqui você pode realizar a validação, seja por API ou de forma local.
@@ -101,7 +102,8 @@ export default function PushNews() {
       {isLogged ? (
         <CreateNewsComponent />
       ) : (
-        <LoginComponent onLogin={() => setIsLogged(true)} />
+        <LoginComponent 
+        onLogin={() => setIsLogged(true)} />
       )}
     </>
   );
