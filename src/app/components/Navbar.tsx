@@ -23,7 +23,7 @@ export default function Navbar() {
             </div>
             <div className="w-1/3">
                 <form className="flex items-center relative">
-                    <input className="absolute px-2 mr-2 p-1 rounded-full w-full bg-white " type="text" placeholder="Buscar..."/>
+                    <input className="absolute p-2 mr-2 p-1 rounded-full w-full bg-white " type="text" placeholder="Buscar..."/>
                     <button type="submit" className="absolute flex items-center justify-center right-3"><Image className="hover:scale-110" src={search} alt="search" width={25} height={25} /></button>
                 </form>
             </div>
