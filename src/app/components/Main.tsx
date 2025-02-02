@@ -12,9 +12,9 @@ export default function Main() {
             </div>
             <div className="flex w-full justify-center flex-wrap">
                 {
-                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item,) => {
+                    [1, 2, 3, 4, 5, 6, 7, 8, 9].map((item,) => {
                         return (
-                            <div key={item} className=" flex flex-col justify-end p-10 w-1/4 m-1 bg-slate-500 h-[300px] rounded-3xl">
+                            <div key={item} className=" flex flex-col justify-end p-10 w-1/3 border-white border-4 bg-slate-500 h-[300px] rounded-3xl">
                                 <h1 className="text-2xl font-bold text-white">Titulo</h1>
                                 <p className="text-white">Conteúdo</p>
                                 <Link href="/" >Leia mais</Link>

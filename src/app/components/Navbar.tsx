@@ -4,18 +4,12 @@ import search from "../assets/search.png";
 
 export default function Navbar() {
     return (
-        <div className="flex w-full justify-between bg-slate-600 p-4 px-20 ">
-            <div>
+        <div className="flex w-full justify-between items-center bg-green-600 p-4 px-10 ">
+            <div className="w-1/3">
                 <Link href="/" className="text-2xl font-bold text-white">EcoBlog</Link>
             </div>
             <div className="w-1/3">
-                <form className="flex relative">
-                    <input className="absolute mr-2 p-1 rounded-full w-full " type="text" placeholder="Buscar"/>
-                    <button type="submit" className="absolute flex align-middle justify-center right-3"><Image className="hover:scale-110 mt-1" src={search} alt="search" width={25} height={25} /></button>
-                </form>
-            </div>
-            <div>
-                <ul className="flex gap-4 text-white cursor-pointer " >
+                <ul className="flex items-center gap-4 text-white" >
                     <li className="hover:scale-110">
                         <Link href="/">Home</Link>
                     </li>
@@ -27,6 +21,13 @@ export default function Navbar() {
                     </li>
                 </ul>
             </div>
+            <div className="w-1/3">
+                <form className="flex items-center relative">
+                    <input className="absolute px-2 mr-2 p-1 rounded-full w-full bg-white " type="text" placeholder="Buscar..."/>
+                    <button type="submit" className="absolute flex items-center justify-center right-3"><Image className="hover:scale-110" src={search} alt="search" width={25} height={25} /></button>
+                </form>
+            </div>
+          
         </div>
     )
 }
