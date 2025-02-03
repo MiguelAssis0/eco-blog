@@ -51,12 +51,12 @@ export default function SearchNews() {
             ) : results.length === 0 ? (
                 <p className="text-center">Nenhuma notícia encontrada para: {query}.</p>
             ) : (
-                <div className="flex gap-4 flex-col w-full  flex-wrap min-h-[90dvh]">
+                <div className="flex gap-4 lg:flex-col w-full flex-wrap min-h-[90dvh]">
                     {results.map((news) => (
-                        <div key={news.id} className="w-full bg-gray-800 rounded-xl flex items-center gap-4">
-                            <Image src={news.imageUrl} alt={news.title} width={150} height={150} className="rounded-lg object-cover h-full w-1/3" />
-                            <div className="flex flex-col gap-4 w-2/3 p-3">
-                                <h2 className="text-xl font-bold text-white">{news.title}</h2>
+                        <div key={news.id} className="bg-gray-800 rounded-xl flex lg:flex-row flex-col items-center w-full h-[100%] lg:pb-0 pb-10 gap-4">
+                            <Image src={news.imageUrl} alt={news.title} width={150} height={150} className="rounded-lg object-cover lg:h-[250px] w-full h-[300px] lg:w-1/3" />
+                            <div className="flex flex-col gap-4 w-2/3 lg:p-3">
+                                <h2 className="text-xl lg:text-left text-center font-bold text-white">{news.title}</h2>
                                 <p className="text-white text-justify">{news.summary}</p>
                                 <Link href={`/news/${news.id}`} className="bg-green-600 text-white p-2 rounded-md w-[150px] hover:bg-green-700">
                                     Leia mais

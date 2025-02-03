@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <div className="flex flex-col align-middle justify-center min-w-full p-20 min-h-full">
             <h1 className="text-4xl text-center mb-5 font-bold">Contato</h1>
-            <form action="" className="w-1/2 mx-auto gap-4 border-gray-400 border-2 p-10 rounded-md">
+            <form action="" className="lg:w-1/2 mx-auto gap-4 border-gray-400 border-2 p-10 rounded-md">
                 <div className="flex flex-col gap-4" >
                     <input type="text" placeholder="Seu nome" className="p-3 rounded-md border-2" />
                     <input type="email" placeholder="Seu email" className="p-3 rounded-md border-2" />

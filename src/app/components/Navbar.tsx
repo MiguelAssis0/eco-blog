@@ -17,29 +17,31 @@ export default function Navbar() {
     };
 
     return (
-        <div className="flex w-full justify-between items-center bg-green-600 p-4 px-10">
-            <div className="w-1/3">
-                <Link href="/" className="text-2xl font-bold text-white">
-                    EcoBlog
-                </Link>
+        <div className="flex w-full lg:flex-row flex-wrap sm:flex-row justify-between items-center bg-green-600 p-4 px-10">
+            <div className="lg:w-1/3 w-full flex justify-between items-center">
+                <div className="lg:w-1/3 ">
+                    <Link href="/" className="text-2xl font-bold text-white">
+                        EcoBlog
+                    </Link>
+                </div>
+                <div className="lg:w-1/3 ">
+                    <ul className="flex items-center gap-4 text-white">
+                        <li className="hover:scale-110">
+                            <Link href="/">Home</Link>
+                        </li>
+                        <li className="hover:scale-110">
+                            <Link href="/about">About</Link>
+                        </li>
+                        <li className="hover:scale-110">
+                            <Link href="/contact">Contact</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div className="w-1/3">
-                <ul className="flex items-center gap-4 text-white">
-                    <li className="hover:scale-110">
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li className="hover:scale-110">
-                        <Link href="/about">About</Link>
-                    </li>
-                    <li className="hover:scale-110">
-                        <Link href="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </div>
-            <div className="w-1/3">
+            <div className="lg:w-1/3 lg:mt-0 w-full mt-4">
                 <form onSubmit={handleSearch} className="flex items-center relative w-full">
                     <input
-                        className="p-2 pr-10 rounded-full w-full bg-white"
+                        className="p-2 pr-10 rounded-full w-full bg-white "
                         type="text"
                         placeholder="Buscar..."
                         value={query}

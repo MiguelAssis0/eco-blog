@@ -42,7 +42,7 @@ export default function Main() {
   const otherNews = news.slice(1);
 
   return (
-    <div className="flex flex-col w-full py-8 px-8 gap-10">
+    <div className="flex flex-col w-full py-8 px-8 lg:gap-10 sm:gap-5">
       {loading ? (
         <p>Carregando notícias...</p>
       ) : news.length === 0 ? (
@@ -76,11 +76,11 @@ export default function Main() {
             </div>
           )}
 
-          <div className="flex w-full justify-center flex-wrap">
+          <div className="flex lg:flex-row sm:flex-col w-full justify-center flex-wrap">
             {otherNews.map((item) => (
               <div
                 key={item.id}
-                className={`flex flex-col relative justify-end p-10 w-1/3 border-white border-8 rounded-3xl text-white bg-cover bg-center bg-slate-500 `}
+                className={`flex flex-col relative justify-end p-10 sm:w-full lg:w-1/3 border-white border-8 rounded-3xl text-white bg-cover bg-center bg-slate-500 `}
               >
                 <Image
                   src={item.imageUrl}
