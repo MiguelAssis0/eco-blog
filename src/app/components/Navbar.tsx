@@ -17,26 +17,24 @@ export default function Navbar() {
     };
 
     return (
-        <div className="flex w-full lg:flex-row flex-wrap sm:flex-row justify-between items-center bg-green-600 p-4 px-10">
-            <div className="lg:w-1/3 w-full flex justify-between items-center">
-                <div className="lg:w-1/3 ">
-                    <Link href="/" className="text-2xl font-bold text-white">
-                        EcoBlog
-                    </Link>
-                </div>
-                <div className="lg:w-1/3 ">
-                    <ul className="flex items-center gap-4 text-white">
-                        <li className="hover:scale-110">
-                            <Link href="/">Home</Link>
-                        </li>
-                        <li className="hover:scale-110">
-                            <Link href="/about">About</Link>
-                        </li>
-                        <li className="hover:scale-110">
-                            <Link href="/contact">Contact</Link>
-                        </li>
-                    </ul>
-                </div>
+        <div className="w-full flex-wrap flex justify-between items-center bg-green-600 p-4 px-10">
+            <div className="lg:w-1/3 w-1/2 ">
+                <Link href="/" className="text-2xl font-bold text-white">
+                    EcoBlog
+                </Link>
+            </div>
+            <div className="lg:w-1/3 w-1/2">
+                <ul className="flex lg:ml-10 items-center text-center lg:justify-start justify-end w-full gap-4 text-white">
+                    <li className="hover:scale-110 hover:font-bold">
+                        <Link href="/">Home</Link>
+                    </li>
+                    <li className="hover:scale-110 hover:font-bold">
+                        <Link href="/about">About</Link>
+                    </li>
+                    <li className="hover:scale-110 hover:font-bold">
+                        <Link href="/contact">Contact</Link>
+                    </li>
+                </ul>
             </div>
             <div className="lg:w-1/3 lg:mt-0 w-full mt-4">
                 <form onSubmit={handleSearch} className="flex items-center relative w-full">
