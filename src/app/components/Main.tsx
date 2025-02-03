@@ -38,9 +38,8 @@ export default function Main() {
     fetchNews();
   }, []);
 
-  const mainNews = news[news.length - 1];
-  const otherNews = news.slice(0, news.length - 1);
-
+  const mainNews = news[0];
+  const otherNews = news.slice(1);
 
   return (
     <div className="flex flex-col w-full py-8 px-8 gap-10">
