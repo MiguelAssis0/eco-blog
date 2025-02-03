@@ -3,7 +3,7 @@ interface News {
     title: string;
     resume: string;
     author: string;
-    font: string;
+    source: string;
     category: string;
     date: string;
     imageUrl: string;

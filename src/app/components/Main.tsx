@@ -38,11 +38,12 @@ export default function Main() {
     fetchNews();
   }, []);
 
-  const mainNews = news[0];
-  const otherNews = news.slice(1);
+  const mainNews = news[news.length - 1];
+  const otherNews = news.slice(0, news.length - 1);
+
 
   return (
-    <div className="flex flex-col w-full justify-between py-8 px-8 gap-5">
+    <div className="flex flex-col w-full py-8 px-8 gap-10">
       {loading ? (
         <p>Carregando notícias...</p>
       ) : news.length === 0 ? (
@@ -50,7 +51,7 @@ export default function Main() {
       ) : (
         <>
           {mainNews && (
-            <div className="flex w-full justify-between">
+            <div className="flex w-full ">
               <div
                 key={mainNews.id}
                 className="flex flex-col relative justify-end p-20 w-full h-[600px] rounded-3xl text-white bg-slate-600 bg-cover bg-center"
@@ -58,7 +59,7 @@ export default function Main() {
                 <Image
                   src={mainNews.imageUrl}
                   alt={mainNews.title}
-                  className="w-full h-full object-cover absolute top-0 left-0 z-0 rounded-3xl"
+                  className="w-full h-full object-cover absolute top-0 left-0 z-0 rounded-3xl filter brightness-50"
                   width={500}
                   height={500}
                 />
@@ -76,20 +77,27 @@ export default function Main() {
             </div>
           )}
 
-          <div className="flex w-full justify-center flex-wrap gap-5">
+          <div className="flex w-full justify-center flex-wrap">
             {otherNews.map((item) => (
               <div
                 key={item.id}
-                className={`flex flex-col justify-end p-10 w-1/3 border-white border-4 h-[300px] rounded-3xl text-white bg-cover bg-center bg-slate-500 `}
+                className={`flex flex-col relative justify-end p-10 w-1/3 border-white border-8 rounded-3xl text-white bg-cover bg-center bg-slate-500 `}
               >
-                <h1 className="text-2xl font-bold">{item.title}</h1>
-                <p>
+                <Image
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="w-full h-full object-cover absolute top-0 left-0 z-0 rounded-3xl filter brightness-50"
+                  width={500}
+                  height={500}
+                />
+                <h1 className="text-2xl mb-2 font-bold z-10">{item.title}</h1>
+                <p className="z-10">
                   {item.resume ||
                     (item.content.length > 100
                       ? item.content.slice(0, 100) + "..."
                       : item.content)}
                 </p>
-                <Link href={`/news/${item.id}`} className="underline">
+                <Link href={`/news/${item.id}`} className="bg-green-600 px-10 py-2 w-1/2 mt-5 rounded-3xl hover:bg-green-700 z-10">
                   Leia mais
                 </Link>
               </div>
