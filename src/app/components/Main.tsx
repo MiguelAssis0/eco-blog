@@ -64,7 +64,7 @@ export default function Main() {
                 />
                 <h1 className="text-2xl mb-2 font-bold z-10">{mainNews.title}</h1>
                 <p className="z-10 mb-5">
-                  {mainNews.resume ||
+                  {mainNews.summary ||
                     (mainNews.content.length > 100
                       ? mainNews.content.slice(0, 100) + "..."
                       : mainNews.content)}
@@ -91,7 +91,7 @@ export default function Main() {
                 />
                 <h1 className="text-2xl mb-2 font-bold z-10">{item.title}</h1>
                 <p className="z-10">
-                  {item.resume ||
+                  {item.summary ||
                     (item.content.length > 100
                       ? item.content.slice(0, 100) + "..."
                       : item.content)}

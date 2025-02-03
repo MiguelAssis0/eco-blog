@@ -53,12 +53,12 @@ export default function Search() {
             ) : (
                 <div className="flex gap-4 flex-col w-full  flex-wrap min-h-[90dvh]">
                     {results.map((news) => (
-                        <div key={news.id} className="w-full bg-slate-300 p-4 px-10 h-[200px] rounded-xl flex items-center gap-4">
-                            <Image src={news.imageUrl} alt={news.title} width={150} height={150} className="rounded-lg object-cover" />
-                            <div>
+                        <div key={news.id} className="w-full bg-gray-800 rounded-xl flex items-center gap-4">
+                            <Image src={news.imageUrl} alt={news.title} width={150} height={150} className="rounded-lg object-cover h-full w-1/3" />
+                            <div className="flex flex-col gap-4 w-2/3 p-3">
                                 <h2 className="text-xl font-bold text-white">{news.title}</h2>
-                                <p className="text-white">{news.resume}</p>
-                                <Link href={`/news/${news.id}`} className="text-white underline">
+                                <p className="text-white text-justify">{news.summary}</p>
+                                <Link href={`/news/${news.id}`} className="bg-green-600 text-white p-2 rounded-md w-[150px] hover:bg-green-700">
                                     Leia mais
                                 </Link>
                             </div>

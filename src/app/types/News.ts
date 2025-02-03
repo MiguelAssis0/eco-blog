@@ -1,7 +1,7 @@
 interface News {
     id: string;
     title: string;
-    resume: string;
+    summary: string;
     author: string;
     source: string;
     category: string;
