@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="p-20 min-h-full text-justify">
+        <div className="lg:p-15 md:p-10 p-5 min-h-full text-justify">
 
             <h1 className="text-2xl mb-5 font-bold ">Sobre a Eco-Blog</h1>
             <p className="mb-5">A <strong>Eco-Blog</strong> é uma plataforma digital inovadora dedicada à produção e compartilhamento de conteúdo de alta qualidade sobre os mais variados assuntos. Nosso objetivo é informar, inspirar e conectar pessoas por meio de artigos ricos em conhecimento e bem fundamentados, abordando temas que vão desde tecnologia e sustentabilidade até estilo de vida, negócios, cultura e bem-estar.</p>
