@@ -42,7 +42,7 @@ export default function Main() {
   const otherNews = news.slice(1);
 
   return (
-    <div className="flex flex-col w-full py-8 px-8 lg:gap-10 sm:gap-5">
+    <div className="flex flex-col w-full py-8 lg:px-8 px-5 lg:gap-10 sm:gap-5">
       {loading ? (
         <p>Carregando notícias...</p>
       ) : news.length === 0 ? (
@@ -69,7 +69,7 @@ export default function Main() {
                       ? mainNews.content.slice(0, 100) + "..."
                       : mainNews.content)}
                 </p>
-                <Link href={`/news/${mainNews.id}`} className="bg-green-600 px-10 py-2 w-1/3 rounded-3xl hover:bg-green-700  z-10 ">
+                <Link href={`/news/${mainNews.id}`} className="bg-green-600 px-10 py-2 lg:w-1/3 md:w-1/2 w-full text-center rounded-3xl hover:bg-green-700  z-10 ">
                   Leia mais
                 </Link>
               </div>
@@ -96,7 +96,7 @@ export default function Main() {
                       ? item.content.slice(0, 100) + "..."
                       : item.content)}
                 </p>
-                <Link href={`/news/${item.id}`} className="bg-green-600 px-10 py-2 w-1/2 mt-5 rounded-3xl hover:bg-green-700 z-10">
+                <Link href={`/news/${item.id}`} className="bg-green-600 px-10 py-2 lg:w-1/2 mt-5 text-center rounded-3xl hover:bg-green-700 z-10">
                   Leia mais
                 </Link>
               </div>
