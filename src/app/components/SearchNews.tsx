@@ -43,7 +43,7 @@ export default function SearchNews() {
     }, [query]);
 
     return (
-        <div className="p-10 min-h-full">
+        <div className="lg:p-10 p-5 min-h-full">
             <h1 className="text-2xl mb-5 font-bold text-center">Resultados da busca:</h1>
 
             {loading ? (

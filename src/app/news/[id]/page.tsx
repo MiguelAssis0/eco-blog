@@ -55,7 +55,7 @@ export default function NewsPage() {
 
 
     return (
-        <div className="p-10 min-h-full">
+        <div className="lg:p-10 py-10 min-h-full">
             {loading ? (
                 <p className="text-center">Carregando notícia...</p>
             ) : !news ? (
@@ -77,7 +77,7 @@ export default function NewsPage() {
                     {/* Seção de outras notícias */}
                     {otherNews.length > 0 && (
                         <div className="mt-10">
-                            <h2 className="text-2xl font-bold mb-4">Outras Notícias</h2>
+                            <h2 className="text-2xl lg:text-left text-center font-bold mb-4">Outras Notícias</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                                 {otherNews.map((item) => (
                                     <Link key={item.id} href={`/news/${item.id}`}>
